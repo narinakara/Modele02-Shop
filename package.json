@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
-    "html-webpack-plugin": "^5.5.1"
+    "html-webpack-plugin": "^5.5.1",
+    "normalize.css": "^8.0.1"
   }
 }
