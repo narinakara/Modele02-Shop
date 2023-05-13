@@ -129,7 +129,8 @@ body {
     }
     &__image {
         width: 92%;
-        box-shadow: 2px 4px 10px 10px rgba(26, 26, 26, 1.0);
+        box-shadow: 10px 18px 50px 4px rgba(26, 26, 26, 1.0);
+        border-radius: 50%;
     }
     &__btn {
         background-color: transparent;
@@ -187,26 +188,32 @@ body {
     &__tomato {
         position: absolute;
         bottom: 115px;
-        right: 0;
+        right: 90px;
         width: 11rem;
     }
     &__avocado {
         position: absolute;
-        bottom: 810px;
-        right: -120px;
+        top: 45px;
+        right: -20px;
         width: 22.25rem;
     }
     &__cucumber {
         position: absolute;
-        bottom: 1041px;
-        right: 900px;
+        top: 0;
+        right: 1080px;
         width: 10rem;
     }
     &__pepper {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 610px;
+        left: 40px;
         width: 10rem;
+    }
+    &__women {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        width: 20rem;
     }
 }
 .title {
