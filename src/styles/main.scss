@@ -232,6 +232,7 @@ body {
     font-family: $font-cormorant;
     font-weight: 700;
     font-size: 8rem;
+    line-height: 1;
     margin: 0;
     &__span {
         font-style: italic;
@@ -262,6 +263,14 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    &_max {
+        padding: 2.4rem 5rem;
+    }
+    &_min {
+        font-size: 1.4rem;
+        padding: 2rem 3.4rem;
+        box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+    }
 }
 
 .offer {
@@ -287,18 +296,18 @@ body {
     &-slide {
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
-        padding: 4rem 3.7rem;
+        padding: 3rem 3.7rem 3.8rem;
         box-sizing: border-box;
-        height: 520px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         z-index: 0;
         &_white {
+            height: 520px;
+            display: flex;
+            flex-direction: column;
             justify-content: flex-end;
+            padding: 4rem 3.7rem;
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
@@ -369,15 +378,34 @@ body {
                 background-repeat: no-repeat;
             }
         }
+        &_trends {
+            height: 700px;
+        }
         &__cover {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 293px;
+            height: 322px;
             text-align: center;
         }
         &__image {
             width: 100%;
+            max-width: 351px;
+            height: 100%;
+            object-fit: contain;
+        }
+        &__description {
+            font-size: 1.8rem;
+            color: rgba(39, 48, 15, 0.7);
+            margin-top: 2rem;
+            margin-bottom: 0;
+            min-height: 55px;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+        &__price {
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
         }
         &__footer {
             display: flex;
@@ -407,6 +435,7 @@ body {
 
 .counter {
     display: flex;
+    cursor: pointer;
     &__btn {
         cursor: pointer;
         width: 50px;
@@ -416,6 +445,10 @@ body {
         padding: 0;
         background-position: center center;
         border-radius: 100%;
+        &_min {
+            width: 40px;
+            height: 40px;
+        }
     }
     &__minus {
         pointer-events: none;
@@ -436,6 +469,9 @@ body {
         width: 46px;
         border: none;
         padding: 0;
+        &_min {
+            width: 33px;
+        }
     }
 }
 
@@ -499,6 +535,92 @@ body {
 .trends {
     padding-bottom: 100px;
     &__text {
-        margin-top: 32px;
+        margin-top: 4rem;
+    }
+}
+
+.catalog {
+    &__list {
+        margin-top: 8.5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.category {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__item {
+        flex-basis: 230px;
+        text-align: center;
+    }
+    &__link {
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, .5);
+        color: rgba($green, .5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+        }
+    }
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &__item {
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 2rem;
+        padding: 2.7rem 3rem 3.8rem;
+        box-sizing: border-box;
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+    }
+    &__cover {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 204px;
+        text-align: center;
+    }
+    &__image {
+        width: 100%;
+        max-width: 351px;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__title {
+        font-family: $font-cormorant;
+        font-size: 3rem;
+        color: $green;
+        margin-top: 1.7rem;
+        margin-bottom: 0;
+    }
+    &__description {
+        font-size: 1.6rem;
+        color: rgba($green, .7);
+        margin-top: 1.8rem;
+        margin-bottom: 0;
+        min-height: 61px;
+        max-width: 300px;
+        line-height: 1.5;
+    }
+    &__price {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        margin-top: 0;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
