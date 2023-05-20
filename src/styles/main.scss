@@ -263,6 +263,7 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    border: none;
     &_max {
         padding: 2.4rem 5rem;
     }
@@ -652,5 +653,143 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.delivery {
+    margin-top: 15rem;
+    &__box {
+        display: flex;
+        gap: 17rem;
+        margin-top: 8.2rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 567px;
+    }
+    &__link {
+        color: $green;
+        &:hover {
+            color: $orange;
+        }
+        &_discount {
+            color: $orange;
+            text-decoration: none;
+        }
+    }
+    &__bank {
+        flex-basis: 470px;
+    }
+    &__payment {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3.2rem;
+        &_item {
+            opacity: .4;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+            margin-left: 12rem;
+            margin-top: 6rem;
+            max-width: 382px;
+            flex-grow: 1;
+        }
+        &__list {
+            color: $green;
+            font-size: 2.4rem;
+            text-decoration: none;
+            list-style-type: none;
+            &_tel {
+                display: flex;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 3rem;
+                    height: 3rem;
+                    background-image: url(../images/phone.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+            &_mail {
+                display: flex;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 3rem;
+                    height: 3rem;
+                    background-image: url(../images/mail.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &__form {
+            flex-basis: 589px;
+        }
+    }
+}
+
+.card {
+    border: 2px solid rgba($green, 0.4);
+    padding: 3.2rem 5.8rem 4rem;
+    border-radius: 2rem;
+    &__title {
+        font-size: 30px;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: .6rem;
+    }
+    &__input {
+        border: 1px solid rgba($green, .4);
+        border-radius: 2rem;
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid {
+            border: red;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 360px;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link {
+        margin-top: 1.2rem;
+        cursor: pointer;
+    }
+    &__docs {
+        color: rgba($green, .6);
+        text-decoration: none;
+        border-bottom: 1px solid #ecedec;
     }
 }
