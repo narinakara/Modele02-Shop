@@ -109,7 +109,7 @@ body {
 }
 .main {
     position: relative;
-    padding-bottom: 187px;
+    padding-bottom: 191px;
     overflow: hidden;
     z-index: 0;
     &__item {
@@ -149,8 +149,9 @@ body {
     }
     &__image {
         width: 92%;
-        box-shadow: 10px 18px 50px 4px rgba(26, 26, 26, 1.0);
+        box-shadow: 20px 20px 33px 0px rgba($green, .5);
         border-radius: 50%;
+        animation: shadow 5s linear infinite;
     }
     &__text {
         padding-top: 4rem;
@@ -180,15 +181,15 @@ body {
             position: absolute;
         }
         &_1 {
-            top: 48px;
-            left: 67px;
+            top: 54px;
+            left: 64px;
             &::before {
                 bottom: 9px;
                 right: -35px;
             }
         }
         &_2 {
-            top: 194px;
+            top: 197px;
             right: 0;
             &::before {
                 top: 17px;
@@ -196,7 +197,7 @@ body {
             }
         }
         &_3 {
-            bottom: -45px;
+            bottom: -47px;
             right: 244px;
             &::before {
                 top: -24px;
@@ -225,22 +226,22 @@ body {
     &__cucumber {
         position: absolute;
         top: 0;
-        right: 1120px;
-        width: 10rem;
+        right: 1136px;
+        width: 8rem;
         z-index: -1;
     }
     &__pepper {
         position: absolute;
-        bottom: 610px;
-        left: 30px;
-        width: 10rem;
+        bottom: 600px;
+        left: 27px;
+        width: 9rem;
         z-index: -1;
     }
     &__women {
         position: absolute;
-        bottom: 80px;
-        left: 0;
-        width: 20rem;
+        bottom: 160px;
+        left: -6px;
+        width: 10rem;
         z-index: -1;
     }
 }
@@ -296,7 +297,7 @@ body {
 
 .offer {
     padding-top: 2rem;
-    padding-bottom: 12.8rem;
+    padding-bottom: 16.7rem;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
@@ -305,7 +306,7 @@ body {
 
 .slider {
         overflow: hidden;
-        padding-top: 9.4rem;
+        padding-top: 8.6rem;
 }
 
 .swiper {
@@ -439,6 +440,7 @@ body {
     }
     &-button-next, &-button-prev {
         top: -60px;
+        transition: .3s;
         &::after {
             color: $green;
             font-size: 20px;
@@ -496,12 +498,12 @@ body {
 }
 
 .about {
-    padding-bottom: 100px;
+    padding-bottom: 202px;
     &__box {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 7rem;
+        margin-top: 6.5rem;
     }
     &__text {
         margin-left: 12rem;
@@ -553,9 +555,9 @@ body {
     }
 }
 .trends {
-    padding-bottom: 100px;
+    padding-bottom: 173px;
     &__text {
-        margin-top: 4rem;
+        margin-top: 3.9rem;
     }
 }
 
@@ -573,7 +575,7 @@ body {
         display: flex;
         align-items: center;
         margin: 0 auto;
-        gap: 2rem;
+        gap: 1.1rem;
         letter-spacing: 0.1rem;
         cursor: pointer;
         opacity: .8;
@@ -622,7 +624,7 @@ body {
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 17px;
     margin-bottom: 6.1rem;
     &__item {
         border: 1px solid rgba($green, 0.4);
@@ -675,11 +677,11 @@ body {
 }
 
 .delivery {
-    margin-top: 15rem;
+    margin-top: 14rem;
     &__box {
         display: flex;
         gap: 12%;
-        margin-top: 5.6rem;
+        margin-top: 7.4rem;
         margin-left: 12rem;
     }
     &__text {
@@ -849,6 +851,7 @@ body {
         margin-bottom: 0;
     }
     &__link {
+        width: 26rem;
         margin-top: 1.2rem;
         cursor: pointer;
     }
@@ -954,5 +957,17 @@ footer {
     &__fb {
         background-image: url(../images/facebook.svg);
         background-size: 1.8rem;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+    50% {
+        box-shadow: 20px 20px 33px 0px rgba($green, .5);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($green, .5);
     }
 }
