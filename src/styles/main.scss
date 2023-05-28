@@ -1121,10 +1121,15 @@ body {
 .contact {
     padding-top: 100px;
     padding-bottom: 100px;
+    width: 100%;
     &-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
+        @media (max-width: $r_tab) {
+            display: block;
+        }
         &__text {
             margin-left: 12rem;
             margin-top: 6rem;
@@ -1139,7 +1144,10 @@ body {
                 margin-left: 4rem;
             }
             @media (max-width: $r_desk) {
-               
+               margin-left: 0;
+            }
+            @media (max-width: $r_tab) {
+                margin: auto;
             }
         }
         &__list {
@@ -1148,6 +1156,10 @@ body {
             text-decoration: none;
             list-style-type: none;
             transition: .3s;
+            @media (max-width: $r_tab) {
+                display: flex;
+                
+            }
             &:hover {
                 color: $orange;
             }
