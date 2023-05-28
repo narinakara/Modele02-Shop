@@ -23,6 +23,7 @@ $r_desk_1220: 1220px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1430: 1430px;
+$r_desk_1460: 1460px;
 $r_desk_full_1750: 1750px;
 
 html {
@@ -196,6 +197,12 @@ body {
         flex-basis: 18rem;
         height: 4.8rem;
         margin-top: 0.8rem;
+        @media (max-width: $r_desk) {
+            flex-basis: 14rem;
+        }
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
     }
 }
 .container {
@@ -539,13 +546,19 @@ body {
             padding: 2rem 2rem;
         }
         @media (max-width: $r_desk_1220) {
-            
+            margin: auto;
         }
     }
     &_min {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+        @media (max-width: $r_desk_1460) {
+            padding: 1.5rem 1rem;
+        }
+        @media (max-width: $r_desk_1220) {
+            margin: auto;
+        }
     }
 }
 
@@ -697,6 +710,9 @@ body {
             min-height: 55px;
             max-width: 300px;
             line-height: 1.5;
+            @media (max-width:$r_desk_1220) {
+                margin: auto;
+            }
         }
         &__price {
             font-size: 2.4rem;
@@ -928,6 +944,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-wrap: wrap;
     &__item {
         flex-basis: 230px;
         text-align: center;
@@ -953,11 +970,20 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 17px;
     margin-bottom: 6.1rem;
+    @media (max-width: $r_desk_1280) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $r_desk) {
+        grid-template-columns: repeat(2, 1fr);
+    }
     &__item {
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
+        @media (max-width: $r_desk_1220) {
+            text-align: center;
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
         }
@@ -990,6 +1016,9 @@ body {
         min-height: 61px;
         max-width: 300px;
         line-height: 1.5;
+        @media (max-width:$r_desk_1220) {
+            margin: auto;
+        }
     }
     &__price {
         font-size: 2.4rem;
@@ -1000,6 +1029,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: .9rem;
     }
 }
 
@@ -1010,6 +1040,18 @@ body {
         gap: 12%;
         margin-top: 7.4rem;
         margin-left: 12rem;
+        @media (max-width: $r_desk_1280) {
+            margin-top: 5rem;
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-top: 3rem;
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_tab) {
+            margin-top: 3.2rem;
+            display: block;
+        }
     }
     &__text {
         flex-basis: 44%;
@@ -1047,6 +1089,9 @@ body {
         align-items: center;
         margin-top: 4.3rem;
         gap: 3rem;
+        @media (max-width: $r_tab) {
+          justify-content: center;
+        }
     }
     &__item {
         height: 32px;
@@ -1085,6 +1130,17 @@ body {
             margin-top: 6rem;
             max-width: 382px;
             flex-grow: 1;
+            @media (max-width: $r_desk_1280) {
+                margin-top: 5rem;
+                margin-left: 8rem;
+            }
+            @media (max-width: $r_desk_1120) {
+                margin-top: 3rem;
+                margin-left: 4rem;
+            }
+            @media (max-width: $r_desk) {
+               
+            }
         }
         &__list {
             color: $green;
@@ -1141,6 +1197,9 @@ body {
     border: 2px solid rgba($green, 0.4);
     padding: 3.2rem 5.8rem 4rem;
     border-radius: 2rem;
+    @media (max-width: $r_desk) {
+        
+    }
     &__title {
         font-size: 30px;
         font-family: $font-cormorant;
@@ -1204,11 +1263,23 @@ footer {
         display: flex;
         justify-content: space-between;
         font-size: 1.8rem;
+        @media (max-width: $r_tab) {
+            
+        }
     }
     &__info {
         display: flex;
         justify-content: space-between;
         flex-basis: 66.5%;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 75%;
+        }
+        @media (max-width: $r_desk) {
+            flex-basis: 80%;
+        }
+        @media (max-width: $r_tab_900) {
+            flex-basis: 100%;
+        }
     }
     &__list {
         list-style-type: none;
