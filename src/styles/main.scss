@@ -232,8 +232,10 @@ body {
         @media (max-width: $r_tab_930) {
             margin: auto;
         }
-        @media (max-width: $r_mob_650) {
-            
+        @media (max-width: $r_mob_360) {
+            flex-basis: inherit;
+            width: 12rem;
+            height: 3rem;
         }
     }
 }
