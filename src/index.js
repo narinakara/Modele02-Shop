@@ -75,4 +75,18 @@ var swiper = new Swiper(".offerSwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      1000: {
+        slidesPerView: 3,
+        slidesPerGroup: 3
+      }
+    }
   });
