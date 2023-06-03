@@ -39,11 +39,12 @@
                 <button href="#" class="header__cart">
                     <span class="header__counter">0</span>
                 </button>
-                <div class="header__dropdown">
+                <div class="header__dropdown" id="Notification">
                     <div class="header__cover">
                         <img class="header__img" src="images/catalog/milk.png" alt="Молоко">
                     </div>
                     <p class="header__text">Вы добавили в корзину <a href="#" class="header__product">Молоко топленое</a></p>
+                    <button type="button" class="close" onclick="document.getElementById('Notification').style.visibility='hidden'"></button>
                 </div>
             </div>
         </header>
@@ -68,15 +69,33 @@
                     <div class="main__line">
                         <img class="main__image" src="images/plate.png" alt="Тарелка">
                     </div>
-                    <button class="main__btn main__btn_1" type="button">
+                    <button class="main__btn main__btn_1" type="button" onclick="document.getElementById('FoodOne').style.visibility='visible'">
                         <span class="main__food">Авокадо</span>134 руб
                     </button>
-                    <button class="main__btn main__btn_2" type="button">
+                    <div class="main__about main__about_1" id="FoodOne">
+                        <h3 class="main__title">Авокадо</h3>
+                        <p class="main__description">Авокадо, Свежий урожай</p>
+                        <p class="main__price">134 руб</p>
+                        <button class="close" onclick="document.getElementById('FoodOne').style.visibility='hidden'"></button>
+                    </div>
+                    <button class="main__btn main__btn_2" type="button" onclick="document.getElementById('FoodTwo').style.visibility='visible'">
                         <span class="main__food">Картофель</span>169 руб
                     </button>
-                    <button class="main__btn main__btn_3" type="button">
+                    <div class="main__about main__about_2" id="FoodTwo">
+                        <h3 class="main__title">Картофель</h3>
+                        <p class="main__description">Картофель Молодой, Свежий урожай, 1кг</p>
+                        <p class="main__price">169 руб/кг</p>
+                        <button class="close" onclick="document.getElementById('FoodTwo').style.visibility='hidden'"></button>
+                    </div>
+                    <button class="main__btn main__btn_3" type="button" type="button" onclick="document.getElementById('FoodThree').style.visibility='visible'">
                         <span class="main__food">Томаты</span>215 руб
                     </button>
+                    <div class="main__about main__about_3" id="FoodThree">
+                        <h3 class="main__title">Томаты</h3>
+                        <p class="main__description">Томаты, Свежий урожай</p>
+                        <p class="main__price">215 руб</p>
+                        <button class="close" onclick="document.getElementById('FoodThree').style.visibility='hidden'"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -280,14 +299,16 @@
                     <a class="category__link" href="">Овощи и фрукты</a>
                 </li>
             </ul>
-            <div class="catalog__list category-swiper categorySwiper">
-                <div class="swiper-wrapper">
-                    <a class="swiper-slide category-swiper__link" href="">Молочные продукты</a>
-                    <a class="swiper-slide category-swiper__link" href="">Бакалея</a>
-                    <a class="swiper-slide category-swiper__link" href="">Мясо, птица</a>
-                    <a class="swiper-slide category-swiper__link" href="">Детям</a>
-                    <a class="swiper-slide category-swiper__link" href="">Овощи и фрукты</a>
-                  </div>
+            <div class="slider slider__catalog">
+                <div class="catalog__list category-swiper categorySwiper">
+                    <div class="swiper-wrapper">
+                        <a class="swiper-slide category-swiper__link" href="">Молочные продукты</a>
+                        <a class="swiper-slide category-swiper__link" href="">Бакалея</a>
+                        <a class="swiper-slide category-swiper__link" href="">Мясо, птица</a>
+                        <a class="swiper-slide category-swiper__link" href="">Детям</a>
+                        <a class="swiper-slide category-swiper__link" href="">Овощи и фрукты</a>
+                      </div>
+                </div>
             </div>
             <div class="catalog-grid">
                 <div class="catalog-grid__item">
@@ -397,7 +418,7 @@
                 </div>
                 <div class="catalog-grid__item">
                     <div class="catalog-grid__cover">
-                        <img class="catalog-grid__image" src="images/catalog/iygyrt2.png" alt="Йогурт">
+                        <img class="catalog-grid__image" src="images/йогурт.jpeg" alt="Йогурт">
                     </div>
                     <h3 class="catalog-grid__title">
                         Йогурт термостатный
@@ -481,13 +502,10 @@
                     </p>
                     <ul class="delivery__payment">
                         <li class="delivery__item delivery__item_master">
-                            <img class="delivery__image" src="images/mastercard.png" alt="Мастеркарт">
                         </li>
                         <li class="delivery__item delivery__item_visa">
-                            <img class="delivery__image" src="images/visa.png" alt="Виза">
                         </li>
                         <li class="delivery__item delivery__item_pay">
-                            <img class="delivery__image" src="images/paypal.png" alt="Пай">
                         </li>
                     </ul>
                 </div>

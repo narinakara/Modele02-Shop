@@ -76,10 +76,3 @@ var swiper = new Swiper(".offerSwiper", {
       clickable: true,
     },
   });
-
-  function openModal() {
-    document.getElementById("dropdown").style.display = "block";
-  }
-  function closeModal() {
-    document.getElementById("dropdown").style.top = "-400px";
-  }
