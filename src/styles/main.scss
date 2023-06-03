@@ -25,6 +25,7 @@ $r_desk: 1000px;
 $r_desk_1120: 1120px;
 $r_desk_hd: 1200px;
 $r_desk_1220: 1220px;
+$r_desk_1260: 1260px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1430: 1430px;
@@ -1315,7 +1316,7 @@ body {
 
 .category-swiper {
     display: none;
-    @media (max-width: $r_mob_500) {
+    @media (max-width: $r_desk_1260) {
         display: block;
         text-align: center;
     }
@@ -1378,7 +1379,12 @@ body {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
         }
         @media (max-width:$r_tab) {
-            padding: 2rem 1rem 2rem;
+            padding: 1rem 1rem 1rem;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
         }
     }
     &__cover {
@@ -1539,7 +1545,7 @@ body {
     &__item {
         height: 32px;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         opacity: 0.4;
         transform: scale(1);
